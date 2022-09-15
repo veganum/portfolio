@@ -2,6 +2,7 @@
 @import url('./styles/var.css');
 @import url('./styles/switch.css');
 @import url('./styles/title.css');
+@import url('./styles/pagesGrid.css');
 
 */ * {
   margin: 0;

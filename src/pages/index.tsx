@@ -11,26 +11,26 @@ export const Home = () => {
       <GridItem bgGradient="linear(to-l, #7928CA, #FF0080,orangered)">
         <Navbar />
       </GridItem>
-      <GridItem>
+      <GridItem className="pagesWithoutColor">
         <Title />
         <img src="" alt="" />
       </GridItem>
-      <GridItem style={{ height: "100vh" }}>
-        <hr />
+      <GridItem
+        className="pagesColor"
+        bgGradient="linear(to-l, #7928CA, #FF0080,orangered)"
+      >
         <About />
       </GridItem>
-      <GridItem style={{ height: "100vh" }}>
-        <hr />
+      <GridItem className="pagesWithoutColor">
         <Curriculum />
       </GridItem>
-      <GridItem style={{ height: "100vh" }}>
-        <hr />
+      <GridItem
+        className="pagesColor"
+        bgGradient="linear(to-l, #7928CA, #FF0080,orangered)"
+      >
         <Proyects />
       </GridItem>
-      <GridItem style={{ height: "100vh" }}>
-        <hr />
-        Footbar
-      </GridItem>
+      <GridItem className="pagesWithoutColor">Footbar</GridItem>
     </Grid>
   );
 };
