@@ -48,11 +48,10 @@ export const Home = () => {
         </button>
       </div>
 
-      <div id="home" className="section" onClick={onClickMore}>
-        <GridItem bgGradient="linear(to-l, #7928CA, #FF0080,orangered)">
-          <Navbar />
-        </GridItem>
-      </div>
+      <GridItem bgGradient="linear(to-l, #7928CA, #FF0080,orangered)">
+        <Navbar />
+      </GridItem>
+
       <div id="home" className="section" onClick={onClickMore}>
         <GridItem className="pagesWithoutColor">
           <Title />

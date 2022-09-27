@@ -1,0 +1,48 @@
+#sky {
+    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sky.png) repeat-X;
+    animation: movebg 9s linear infinite;
+}
+
+#sea {
+    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sea.png) repeat-x;
+    box-shadow: 10px 10px 45px RGBA(0, 0, 0, 0.95) inset;
+    animation: movebg 7s linear infinite;
+    position: relative;
+    top: 145px;
+}
+
+@keyframes movebg {
+    0% {
+        background-position: 550px
+    }
+
+    100% {
+        background-position: 0
+    }
+}
+
+#gb {
+    width: 104px;
+    height: 150px;
+    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-guybrush.png) no-repeat;
+    animation: gbwalk 1s steps(6) infinite;
+    margin: auto;
+    position: relative;
+    bottom: 34px;
+    /* Ojo, muy costoso en rendimiento */
+    /* filter:drop-shadow(5px 5px 5px #000); */
+}
+
+@keyframes gbwalk {
+    0% {
+        background-position: 0
+    }
+
+    100% {
+        background-position: -624px
+    }
+}
+
+.center-animation {
+    margin-top: 25vh;
+}
