@@ -11,10 +11,11 @@ export const About = () => {
       <GridItem w="100%" h="70vh">
         <Center h="100%" w="100%">
           <Image
+            className="imageAbout"
             borderRadius="full"
-            boxSize="600px"
+            // boxSize="600px"
             src={Img}
-            alt="Dan Abramov"
+            alt="José Franco"
           />
         </Center>
       </GridItem>
@@ -33,13 +34,7 @@ export const About = () => {
             imperdiet ex. In eleifend semper felis, ac imperdiet urna fringilla
             sit amet. Praesent tempus convallis lectus. Ut mi nisi, tristique
             imperdiet ipsum ullamcorper, gravida fermentum purus. Ut nisi
-            sapien, euismod et orci nec, semper facilisis nunc. Fusce eget elit
-            ut tortor viverra facilisis nec non dolor. Praesent ultrices erat
-            vel tortor tempor mollis. Integer hendrerit faucibus nisl vitae
-            interdum. Quisque et lectus non orci lobortis ornare a sit amet
-            erat. Maecenas posuere pulvinar odio, a mattis purus luctus quis. Ut
-            id enim tincidunt massa faucibus dictum ut quis sapien. Integer
-            dapibus fermentum viverra. Vivamus dictum nisl sit amet nunc
+            sapien, euismod et orci nec, semper facilisis nunc.
           </p>
         </Center>
       </GridItem>

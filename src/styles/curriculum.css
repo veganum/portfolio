@@ -1,48 +1,149 @@
-#sky {
-    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sky.png) repeat-X;
-    animation: movebg 9s linear infinite;
-}
-
-#sea {
-    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sea.png) repeat-x;
-    box-shadow: 10px 10px 45px RGBA(0, 0, 0, 0.95) inset;
-    animation: movebg 7s linear infinite;
-    position: relative;
-    top: 145px;
-}
-
-@keyframes movebg {
-    0% {
-        background-position: 550px
-    }
-
-    100% {
-        background-position: 0
-    }
-}
-
-#gb {
-    width: 104px;
-    height: 150px;
-    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-guybrush.png) no-repeat;
-    animation: gbwalk 1s steps(6) infinite;
+.containerTimeline {
+    width: 90vw;
     margin: auto;
+}
+
+.timeline {
+    counter-reset: year 2015;
     position: relative;
-    bottom: 34px;
-    /* Ojo, muy costoso en rendimiento */
-    /* filter:drop-shadow(5px 5px 5px #000); */
 }
 
-@keyframes gbwalk {
-    0% {
-        background-position: 0
-    }
-
-    100% {
-        background-position: -624px
-    }
+.timeline li {
+    list-style: none;
+    float: left;
+    width: 14%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.center-animation {
-    margin-top: 25vh;
+ul:nth-child(1) {
+    color: var(--chakra-colors-chakra-border-color);
+}
+
+.timeline li:before {
+    counter-increment: year;
+    content: counter(year);
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--chakra-colors-chakra-border-color);
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto 10px auto;
+    background: #F1F1F1;
+    color: #000;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: orangered;
+    top: 25px;
+    left: -50%;
+    z-index: -999;
+    transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after {
+    content: none;
+}
+
+.timeline li.active {
+    color: #555555;
+}
+
+.timeline li.active:before {
+    background: linear-gradient(90deg, #7928CA 0%, #FF0080 35%, orangered 100%);
+    color: #F1F1F1;
+}
+
+
+.timeline li.active+li:after {
+    background: var(--chakra-colors-chakra-border-color);
+}
+
+
+/* ---------------------------------- */
+
+
+
+/* Popover styling */
+
+a {
+    text-decoration: none;
+}
+
+.popover__title {
+    font-size: 14px;
+    /* line-height: 36px; */
+    text-decoration: none;
+    color: orangered;
+    text-align: center;
+}
+
+.popover__wrapper {
+    /* position: relative; */
+    /* margin-top: 1.5rem; */
+    display: inline-block;
+}
+
+.popover__content {
+    opacity: 0;
+    visibility: hidden;
+    left: -150px;
+    transform: translate(0, 10px);
+    background: linear-gradient(90deg, #7928CA 0%, #FF0080 35%, orangered 100%);
+    color: #f2f2f2;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: auto;
+    border-radius: 10px;
+}
+
+.popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.popover__message {
+    text-align: center;
+}
+
+.popover__img {
+    width: 100vw;
+    height: auto;
+}
+
+.popover__date {
+    margin-top: 5px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.popover__text {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: justify;
 }

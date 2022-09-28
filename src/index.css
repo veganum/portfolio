@@ -5,6 +5,8 @@
 @import url('./styles/pagesGrid.css');
 @import url('./styles/navbar.css');
 @import url('./styles/curriculum.css');
+@import url('./styles/about.css');
+@import url('./styles/footer.css');
 
 */ * {
   margin: 0;

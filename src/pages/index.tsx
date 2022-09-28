@@ -6,6 +6,9 @@ import { Curriculum } from "./curriculum/Curriculum";
 import { Proyects } from "./proyects/Proyects";
 import { animateScroll as scroll } from "react-scroll";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
+import { Footer } from "./footer/Footer";
+
+// https://carontestudio.com/blog/como-poner-un-video-de-fondo-en-html/
 
 export const Home = () => {
   const onClickMore = () => {
@@ -80,7 +83,9 @@ export const Home = () => {
         </GridItem>
       </div>
       <div id="footer" className="section" onClick={onClickMore}>
-        <GridItem className="pagesWithoutColor">Footbar</GridItem>
+        <GridItem className="pagesWithoutColor">
+          <Footer />
+        </GridItem>
       </div>
     </Grid>
   );
