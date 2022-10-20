@@ -7,12 +7,13 @@ import { Proyects } from "./proyects/Proyects";
 import { animateScroll as scroll } from "react-scroll";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
 import { Footer } from "./footer/Footer";
+import { SocialMediaBar } from "./home/SocialMediaBar";
 
 // https://carontestudio.com/blog/como-poner-un-video-de-fondo-en-html/
 
 export const Home = () => {
   const onClickMore = () => {
-    scroll.scrollMore(1000);
+    scroll.scrollMore(850);
   };
 
   const onClickDown = () => {
@@ -24,7 +25,7 @@ export const Home = () => {
   };
 
   const onClickMoreDown = () => {
-    scroll.scrollMore(950);
+    scroll.scrollMore(850);
   };
 
   const onClickMoreUp = () => {
@@ -55,11 +56,20 @@ export const Home = () => {
         <Navbar />
       </GridItem>
 
-      <div id="home" className="section" onClick={onClickMore}>
-        <GridItem className="pagesWithoutColor">
-          <Title />
-          <img src="" alt="" />
-        </GridItem>
+      <div id="home" className="section">
+        <Grid h="91.9vh" templateColumns="repeat(6, 1fr)" gap={4}>
+          <GridItem colSpan={1}>
+            <SocialMediaBar />
+          </GridItem>
+          <GridItem
+            colSpan={5}
+            className="pagesWithoutColor"
+            onClick={onClickMore}
+          >
+            <Title />
+            <img src="" alt="" />
+          </GridItem>
+        </Grid>
       </div>
       <div id="about" className="section" onClick={onClickMore}>
         <GridItem
